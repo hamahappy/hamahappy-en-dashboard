@@ -1,16 +1,42 @@
 const dashboardData = {
   openDate: "2027年4月1日",
   overallProgress: 52,
+  properties: [
+    {
+      rank: "第一候補",
+      title: "浜名区内野2395",
+      subtitle: "ガレージ付き2階建・池谷さん宅の離れ",
+      state: "最優先で調査・見積中",
+      stateClass: "status-ok",
+      detail: "都市計画法はクリア（既存宅地確認OK）。浄化槽入れ替え、土地の分筆、改修の見積もりを取るため、10月14日（水）13:30から現地打ち合わせ予定。"
+    },
+    {
+      rank: "第二候補",
+      title: "浜名区寺島2258",
+      subtitle: "椋本さん宅・明治2年の古民家",
+      state: "相談次第で開設可能",
+      stateClass: "status-progress",
+      detail: "古民家だが、関係者との相談・条件整理により開設可能性あり。今後の2つ目の拠点候補として整備を進める。"
+    },
+    {
+      rank: "第三候補",
+      title: "中央区笠井町519-5",
+      subtitle: "売買希望・1,000〜1,200万円",
+      state: "融資条件を見て検討",
+      stateClass: "status-wait",
+      detail: "家主が売買を希望。融資が通れば購入を検討するが、1つ目の拠点としては取得・改修・資金面のリスクがあるため慎重に判断する。"
+    }
+  ],
   status: [
     {
-      title: "物件（内野2395）",
+      title: "物件候補（3候補）",
       state: "調査・見積準備",
       stateClass: "status-progress",
       progress: 68,
-      detail: "浜名区内野2395のガレージ付き家屋を、はまはっぴー・えんの候補として検討中。10月14日に土地・分筆、浄化槽・水道、必要工事について専門業者と現地確認する予定です。10月3日の寺島2258内見とは別案件です。",
+      detail: "第一候補は内野2395、第二候補は寺島2258、第三候補は笠井町519-5。内野を最優先に、寺島は2つ目の拠点候補、笠井は融資条件を見ながら購入可否を検討しています。",
       owner: "開設準備室",
       deadline: "10月中",
-      nextStep: "10月14日の内野現地確認で、分筆・浄化槽・必要工事の条件と概算費用を整理する。"
+      nextStep: "10月14日の内野現地打ち合わせで、浄化槽入れ替え・分筆・改修の見積条件を整理する。"
     },
     {
       title: "行政手続",
@@ -53,8 +79,8 @@ const dashboardData = {
     {
       month: "10月",
       day: "14",
-      title: "内野2395　専門業者合同現地確認",
-      note: "13:30〜　土地・分筆、浄化槽・水道、必要工事と見積条件を確認予定。"
+      title: "内野2395　現地打ち合わせ",
+      note: "13:30〜　浄化槽入れ替え、土地の分筆、改修の見積もり取得に向けて現地確認・打ち合わせ予定。都市計画法は既存宅地確認済み。"
     },
     {
       month: "10月",
@@ -105,8 +131,8 @@ const dashboardData = {
       deadline: "10月15日 10:00"
     },
     {
-      title: "寺島2258は別案件で管理",
-      note: "明治2年建築、L字型生活スペース、居住・事業動線の分離など10月3日の内見内容は、内野2395の情報と混在させない。",
+      title: "寺島2258を第2拠点候補として整理",
+      note: "明治2年の古民家。相談次第で開設可能なため、1つ目の拠点とは切り分け、今後の2つ目の拠点候補として整備方針を検討する。",
       owner: "事務局",
       deadline: "継続"
     }
@@ -116,6 +142,20 @@ const dashboardData = {
 document.getElementById("openDate").textContent = dashboardData.openDate;
 document.getElementById("overallProgress").textContent = dashboardData.overallProgress + "%";
 document.getElementById("overallProgressBar").style.width = dashboardData.overallProgress + "%";
+
+document.getElementById("propertyCandidates").innerHTML = dashboardData.properties.map(item => `
+  <article class="property-candidate">
+    <div class="property-candidate-head">
+      <div>
+        <span class="rank-label">${item.rank}</span>
+        <h3>${item.title}</h3>
+      </div>
+      <span class="status-pill ${item.stateClass}">${item.state}</span>
+    </div>
+    <p class="property-subtitle">${item.subtitle}</p>
+    <p class="property-detail">${item.detail}</p>
+  </article>
+`).join("");
 
 document.getElementById("statusGrid").innerHTML = dashboardData.status.map(item => `
   <article class="status-card">
