@@ -1,6 +1,23 @@
 const dashboardData = {
   openDate: "2027年4月1日",
   overallProgress: 58,
+  publicityAssets: [
+    {
+      type: "SNS正方形版",
+      title: "できることから、いっしょに。",
+      note: "2027年4月OPEN予定。農作業・請負作業・軽作業・食品づくりを紹介し、利用相談・見学相談受付中を大きく掲載。Instagram・Facebook等の投稿向け。"
+    },
+    {
+      type: "横長バナー版",
+      title: "2027年4月 OPEN予定",
+      note: "Webサイト・ダッシュボード・SNSヘッダー等で使いやすい横長版。利用相談・見学相談受付中と浜松市浜名区を掲載。"
+    },
+    {
+      type: "縦長チラシ版",
+      title: "利用者募集の基本チラシ",
+      note: "対象となる方、予定している活動、施設概要、B型10名予定、月〜金9:00〜16:00、問い合わせ導線を掲載した配布用チラシ。"
+    }
+  ],
   properties: [
     {
       rank: "第一候補",
@@ -102,13 +119,13 @@ const dashboardData = {
     },
     {
       title: "利用者募集",
-      state: "準備中",
-      stateClass: "status-progress",
-      progress: 30,
-      detail: "2026年内の募集開始を目標に、案内内容と募集開始時期を検討しています。",
+      state: "広報素材3種作成済み",
+      stateClass: "status-ok",
+      progress: 50,
+      detail: "SNS正方形版、横長バナー版、縦長チラシ版を作成済み。『できることから、いっしょに。』を軸に、2027年4月OPEN予定、利用相談・見学相談受付中として周知準備を進めています。",
       owner: "広報・募集担当",
       deadline: "2026年内",
-      nextStep: "物件方針が固まり次第、募集案内と関係機関への周知を具体化する。"
+      nextStep: "問い合わせ先とQRコードを確定し、相談支援事業所・学校・関係機関への配布とSNS発信を開始する。"
     }
   ],
   schedule: [
@@ -278,6 +295,14 @@ const dashboardData = {
 document.getElementById("openDate").textContent = dashboardData.openDate;
 document.getElementById("overallProgress").textContent = dashboardData.overallProgress + "%";
 document.getElementById("overallProgressBar").style.width = dashboardData.overallProgress + "%";
+
+document.getElementById("publicityAssets").innerHTML = dashboardData.publicityAssets.map(item => `
+  <article class="publicity-card">
+    <span class="publicity-type">${item.type}</span>
+    <strong>${item.title}</strong>
+    <p>${item.note}</p>
+  </article>
+`).join("");
 
 document.getElementById("propertyCandidates").innerHTML = dashboardData.properties.map(item => `
   <article class="property-candidate">
