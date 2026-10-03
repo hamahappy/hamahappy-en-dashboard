@@ -7,28 +7,40 @@ const dashboardData = {
       state: "検討中",
       stateClass: "status-progress",
       progress: 60,
-      detail: "浜名区内野2395のガレージ付き家屋を候補として検討中。浄化槽、分筆、改修費用、契約条件を確認しています。"
+      detail: "浜名区内野2395のガレージ付き家屋を候補として検討中。浄化槽、分筆、改修費用、契約条件を確認しています。",
+      owner: "開設準備室",
+      deadline: "10月中",
+      nextStep: "物件費用を3パターンで比較し、判断材料を1枚にまとめる。"
     },
     {
       title: "行政手続",
       state: "準備中",
       stateClass: "status-progress",
       progress: 45,
-      detail: "生活介護10名・就労継続支援B型10名の多機能型を想定し、障害福祉サービス指定に向けた事前相談事項を整理しています。"
+      detail: "生活介護10名・就労継続支援B型10名の多機能型を想定し、障害福祉サービス指定に向けた事前相談事項を整理しています。",
+      owner: "行政手続担当",
+      deadline: "10月15日打合せ前",
+      nextStep: "多機能型指定・設備基準・人員配置・申請時期の質問を確定する。"
     },
     {
       title: "人員",
       state: "体制整理中",
       stateClass: "status-ok",
       progress: 65,
-      detail: "管理者、サービス管理責任者、支援員、看護職など、必要職種と配置体制を整理しています。"
+      detail: "管理者、サービス管理責任者、支援員、看護職など、必要職種と配置体制を整理しています。",
+      owner: "人員体制担当",
+      deadline: "11月上旬",
+      nextStep: "開所時の勤務体制表と不足職種を確定する。"
     },
     {
       title: "利用者募集",
       state: "準備中",
       stateClass: "status-progress",
       progress: 25,
-      detail: "2026年内の募集開始を目標に、案内内容と募集開始時期を検討しています。"
+      detail: "2026年内の募集開始を目標に、案内内容と募集開始時期を検討しています。",
+      owner: "広報・募集担当",
+      deadline: "2026年内",
+      nextStep: "募集案内のたたき台を作り、開始時期を決める。"
     }
   ],
   schedule: [
@@ -42,9 +54,24 @@ const dashboardData = {
     { title: "指定申請までのスケジュール", note: "2027年4月1日開所から逆算して行政手続きを工程化する。" }
   ],
   nextActions: [
-    { title: "物件費用を3パターンで比較", note: "初期費用・月額負担・浄化槽・分筆・改修費をまとめて比較する。" },
-    { title: "行政への事前相談事項を整理", note: "多機能型の指定、人員配置、設備要件、申請時期を質問リスト化する。" },
-    { title: "開所日から逆算した工程表を作成", note: "物件決定、改修、指定申請、人員確定、利用者募集を月・週単位で管理する。" }
+    {
+      title: "物件費用を3パターンで比較",
+      note: "初期費用・月額負担・浄化槽・分筆・改修費をまとめて比較する。",
+      owner: "開設準備室",
+      deadline: "10月中"
+    },
+    {
+      title: "行政への事前相談事項を整理",
+      note: "多機能型の指定、人員配置、設備要件、申請時期を質問リスト化する。",
+      owner: "行政手続担当",
+      deadline: "10月15日打合せ前"
+    },
+    {
+      title: "開所日から逆算した工程表を作成",
+      note: "物件決定、改修、指定申請、人員確定、利用者募集を月・週単位で管理する。",
+      owner: "開設準備室",
+      deadline: "10月下旬"
+    }
   ]
 };
 
@@ -59,6 +86,14 @@ document.getElementById("statusGrid").innerHTML = dashboardData.status.map(item 
       <span class="status-pill ${item.stateClass}">${item.state}</span>
     </div>
     <p>${item.detail}</p>
+    <div class="status-meta">
+      <span><small>担当</small><strong>${item.owner}</strong></span>
+      <span><small>期限</small><strong>${item.deadline}</strong></span>
+    </div>
+    <div class="next-step">
+      <small>次の一手</small>
+      <strong>${item.nextStep}</strong>
+    </div>
     <div class="mini-progress" aria-label="${item.title}の進捗 ${item.progress}%">
       <span style="width: ${item.progress}%"></span>
     </div>
@@ -87,8 +122,12 @@ document.getElementById("issueList").innerHTML = dashboardData.issues.map(item =
 `).join("");
 
 document.getElementById("nextList").innerHTML = dashboardData.nextActions.map((item, index) => `
-  <article class="stack-item">
+  <article class="stack-item action-item">
     <strong>${index + 1}. ${item.title}</strong>
     <p>${item.note}</p>
+    <div class="action-meta">
+      <span>担当：${item.owner}</span>
+      <span>期限：${item.deadline}</span>
+    </div>
   </article>
 `).join("");
