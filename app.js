@@ -77,11 +77,11 @@ const dashboardData = {
     }
   ],
   financeSummary: [
-    { label: "浄化槽", value: "50万円" },
+    { label: "浄化槽", value: "100万円" },
     { label: "分筆", value: "50万円" },
     { label: "改修", value: "50万円" },
     { label: "建築士", value: "16万円" },
-    { label: "物件関係計", value: "166万円", strong: true },
+    { label: "物件関係計", value: "216万円", strong: true },
     { label: "家賃", value: "月5〜8万円" },
     { label: "開所時給与総額", value: "月60〜65万円目安" },
     { label: "資金方針", value: "見積＋運転資金を融資相談" }
