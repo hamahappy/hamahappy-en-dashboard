@@ -279,3 +279,66 @@ h2 {
   .app-shell { padding-left: 24px; padding-right: 24px; }
   .status-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.status-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.status-meta span {
+  display: grid;
+  gap: 2px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #eef0f3;
+}
+
+.status-meta small,
+.next-step small {
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-meta strong {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.next-step {
+  display: grid;
+  gap: 3px;
+  padding: 10px 11px;
+  margin: 0 0 12px;
+  border-radius: 12px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+.next-step strong {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #1e3a8a;
+}
+
+.action-item {
+  display: grid;
+  gap: 8px;
+}
+
+.action-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.warning-panel {
+  border-color: #fdba74;
+  background: #fffaf5;
+}
