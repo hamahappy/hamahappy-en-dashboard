@@ -389,3 +389,8 @@ h2 {
     font-size: 11px;
   }
 }
+
+
+.property-photo-panel { overflow: hidden; }
+.property-photo { display:block; width:100%; height:auto; max-height:420px; object-fit:cover; border-radius:16px; border:1px solid #e5e7eb; }
+.photo-caption { margin:10px 2px 0; color:#6b7280; font-size:12px; line-height:1.6; }
