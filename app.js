@@ -1,19 +1,19 @@
 const dashboardData = {
   openDate: "2027年4月1日",
-  overallProgress: 52,
+  overallProgress: 58,
   properties: [
     {
       rank: "第一候補",
       title: "浜名区内野2395",
-      subtitle: "ガレージ付き2階建・池谷さん宅の離れ",
+      subtitle: "ガレージ付き2階建・第一候補",
       state: "最優先で調査・見積中",
       stateClass: "status-ok",
-      detail: "都市計画法はクリア（既存宅地確認OK）。浄化槽入れ替え、土地の分筆、改修の見積もりを取るため、10月14日（水）13:30から現地打ち合わせ予定。"
+      detail: "都市計画法はクリア（既存宅地確認OK）。1階ガレージ土間を作業・準備スペース、2階を相談室として活用するB型拠点を検討。浄化槽入れ替え、土地の分筆、改修の見積もりを取るため、10月14日（水）13:30から現地打ち合わせ予定。"
     },
     {
       rank: "第二候補",
       title: "浜名区寺島2258",
-      subtitle: "椋本さん宅・明治2年の古民家",
+      subtitle: "明治2年の古民家・将来拠点候補",
       state: "相談次第で開設可能",
       stateClass: "status-progress",
       detail: "古民家だが、関係者との相談・条件整理により開設可能性あり。今後の2つ目の拠点候補として整備を進める。"
@@ -26,6 +26,48 @@ const dashboardData = {
       stateClass: "status-wait",
       detail: "家主が売買を希望。融資が通れば購入を検討するが、1つ目の拠点としては取得・改修・資金面のリスクがあるため慎重に判断する。"
     }
+  ],
+  operatingModel: [
+    {
+      label: "第一案",
+      title: "B型単独で開所",
+      note: "内野2395は、就労継続支援B型を第一案として2027年4月1日の開所を目指す。生活介護は将来検討。"
+    },
+    {
+      label: "拠点",
+      title: "施設外就労中心",
+      note: "1階ガレージ土間＝作業・準備、2階＝相談室。地域の仕事へ利用者をつなぐ就労支援拠点として運営する。"
+    },
+    {
+      label: "仕事候補",
+      title: "地域仕事を複数用意",
+      note: "バス車内清掃、農家の収穫・出荷、規格外野菜の選定、飲食店清掃を候補とし、本人の特性に合わせて仕事を選べる形を目指す。"
+    },
+    {
+      label: "営業",
+      title: "毎月1日・26日は休業",
+      note: "土日祝は原則休業。営業日数が少ない月は必要に応じて土曜営業を設定し、年間営業日数と収入を調整する。"
+    },
+    {
+      label: "記録・請求",
+      title: "かべなしクラウドで一元管理",
+      note: "利用者情報、支援記録、個別支援計画、実績、加算、工賃、送迎、勤怠、国保連請求を可能な限り一元管理する。"
+    },
+    {
+      label: "生活介護",
+      title: "将来の追加を検討",
+      note: "内野は生活介護よりB型向き。看護師の安定確保と、バリアフリー等に適した別拠点の確保ができた段階で再検討する。"
+    }
+  ],
+  financeSummary: [
+    { label: "浄化槽", value: "50万円" },
+    { label: "分筆", value: "50万円" },
+    { label: "改修", value: "50万円" },
+    { label: "建築士", value: "16万円" },
+    { label: "物件関係計", value: "166万円", strong: true },
+    { label: "家賃", value: "月5〜8万円" },
+    { label: "開所時給与総額", value: "月60〜65万円目安" },
+    { label: "資金方針", value: "見積＋運転資金を融資相談" }
   ],
   status: [
     {
@@ -43,7 +85,7 @@ const dashboardData = {
       state: "準備中",
       stateClass: "status-progress",
       progress: 45,
-      detail: "生活介護10名・就労継続支援B型10名の多機能型を想定し、物件方針決定後の指定申請に向けて必要事項を整理しています。",
+      detail: "内野では就労継続支援B型単独での開所を第一案として整理中。生活介護は、物件適性・看護職員の安定確保・利用ニーズを確認し、将来の別拠点または追加指定として検討します。",
       owner: "行政手続担当",
       deadline: "物件方針決定後",
       nextStep: "内野物件の建築・消防・設備条件が整理でき次第、行政事前相談資料へ反映する。"
@@ -53,10 +95,10 @@ const dashboardData = {
       state: "体制整理中",
       stateClass: "status-ok",
       progress: 65,
-      detail: "管理者、サービス管理責任者、支援員、看護職など、必要職種と配置体制を整理しています。",
+      detail: "管理者兼支援員、サービス管理責任者、職業指導員、生活支援員を中心に体制を検討。各スタッフの勤務可能曜日・時間を確認し、常勤換算と実際のシフトを確定します。",
       owner: "人員体制担当",
       deadline: "11月上旬",
-      nextStep: "開所時の勤務体制表と不足職種を確定する。"
+      nextStep: "各スタッフの勤務可能曜日・時間を確認し、B型単独案の勤務形態一覧表を作成する。"
     },
     {
       title: "利用者募集",
@@ -70,6 +112,12 @@ const dashboardData = {
     }
   ],
   schedule: [
+    {
+      month: "10月",
+      day: "04",
+      title: "スタッフミーティング",
+      note: "15:00〜16:00　顔合わせと進捗共有。B型単独案、内野の施設外就労モデル、勤務可能曜日・時間の確認方針を共有する。"
+    },
     {
       month: "10月",
       day: "03",
@@ -87,6 +135,12 @@ const dashboardData = {
       day: "15",
       title: "浜北商工会議所　融資相談",
       note: "10:00〜　物件取得・改修・運転資金を含む資金計画について相談予定。"
+    },
+    {
+      month: "10月",
+      day: "18",
+      title: "スタッフミーティング",
+      note: "8:30〜10:30　10月14日の見積、15日の融資相談を踏まえ、必要資金・融資額・人員配置・今後の動きを共有する。対面を基本にLINE・オンラインも活用。"
     },
     {
       month: "10月",
@@ -133,6 +187,18 @@ const dashboardData = {
   ],
   issues: [
     {
+      title: "B型単独か多機能型かの最終判断",
+      note: "内野はB型単独を第一案。生活介護は看護職員の確保だけでなく、建物の適性・利用ニーズも踏まえて将来追加を判断する。"
+    },
+    {
+      title: "施設外就労先との契約・運用",
+      note: "バス清掃、農作業、飲食店清掃等について、請負契約、職員配置、個別支援計画、緊急時対応、作業指示系統を整理する。"
+    },
+    {
+      title: "スタッフ勤務可能時間",
+      note: "常勤・非常勤を先に固定せず、各スタッフの勤務可能曜日・時間を確認してから常勤換算と配置を決める。"
+    },
+    {
       title: "内野の土地利用・分筆",
       note: "事業で使用する土地の範囲、分筆の必要性、測量費用を土地家屋調査士と確認する。"
     },
@@ -158,6 +224,24 @@ const dashboardData = {
     }
   ],
   nextActions: [
+    {
+      title: "スタッフ勤務可能時間を確認",
+      note: "勤務可能曜日・時間、週勤務時間、2027年4月からの勤務可否を確認し、常勤換算と勤務形態一覧表へ落とし込む。",
+      owner: "開設準備室",
+      deadline: "10月上旬"
+    },
+    {
+      title: "B型施設外就労モデルを具体化",
+      note: "バス車内清掃、農家の収穫・出荷、規格外野菜選定、飲食店清掃について、仕事量・時間帯・請負条件・必要職員数を確認する。",
+      owner: "開設準備室",
+      deadline: "10月中"
+    },
+    {
+      title: "かべなしクラウド運用項目を決定",
+      note: "支援記録、個別支援計画、加算、送迎、工賃、勤怠、請求のどこまでを一元管理するかを開所前に確定する。",
+      owner: "事務局",
+      deadline: "指定申請準備まで"
+    },
     {
       title: "内野2395の合同現地確認",
       note: "土地家屋調査、浄化槽・水道、建築関係の専門家と、分筆・設備・必要工事を確認する。",
@@ -207,6 +291,21 @@ document.getElementById("propertyCandidates").innerHTML = dashboardData.properti
     <p class="property-subtitle">${item.subtitle}</p>
     <p class="property-detail">${item.detail}</p>
   </article>
+`).join("");
+
+document.getElementById("operatingModel").innerHTML = dashboardData.operatingModel.map(item => `
+  <article class="model-card">
+    <span class="model-label">${item.label}</span>
+    <strong>${item.title}</strong>
+    <p>${item.note}</p>
+  </article>
+`).join("");
+
+document.getElementById("financeSummary").innerHTML = dashboardData.financeSummary.map(item => `
+  <div class="finance-item ${item.strong ? "finance-strong" : ""}">
+    <span>${item.label}</span>
+    <strong>${item.value}</strong>
+  </div>
 `).join("");
 
 document.getElementById("statusGrid").innerHTML = dashboardData.status.map(item => `
