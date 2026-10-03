@@ -44,6 +44,7 @@ const dashboardData = {
     }
   ],
   schedule: [
+    { month: "10月", day: "03", title: "寺島2258　内見・採寸", note: "15:00〜　かとう建築事務所と現地確認・採寸。" },
     { month: "10月", day: "15", title: "浜北商工会議所　融資相談", note: "10:00〜　融資・資金計画について相談予定。" }
   ],
   issues: [
