@@ -79,7 +79,7 @@ const dashboardData = {
   financeSummary: [
     { label: "浄化槽", value: "100万円" },
     { label: "分筆", value: "50万円" },
-    { label: "改修", value: "50万円" },
+    { label: "改修", value: "50万円（DIY中心・専門工事のみ外注）" },
     { label: "建築士", value: "16万円" },
     { label: "物件関係計", value: "216万円", strong: true },
     { label: "家賃", value: "月5〜8万円" },
