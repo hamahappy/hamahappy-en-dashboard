@@ -394,3 +394,14 @@ h2 {
 .property-photo-panel { overflow: hidden; }
 .property-photo { display:block; width:100%; height:auto; max-height:420px; object-fit:cover; border-radius:16px; border:1px solid #e5e7eb; }
 .photo-caption { margin:10px 2px 0; color:#6b7280; font-size:12px; line-height:1.6; }
+
+
+.properties-panel { margin-bottom: 16px; }
+.property-list { display: grid; gap: 12px; }
+.property-candidate { padding: 14px; border: 1px solid #e5e7eb; border-radius: 16px; background: #f9fafb; }
+.property-candidate-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.property-candidate h3 { margin: 4px 0 0; font-size: 17px; }
+.rank-label { display: inline-block; font-size: 12px; font-weight: 800; color: #475569; }
+.property-subtitle { margin: 8px 0 6px; font-size: 13px; font-weight: 700; color: #334155; }
+.property-detail { margin: 0; font-size: 13px; line-height: 1.65; color: #6b7280; }
+@media (max-width: 480px) { .property-candidate-head { display: grid; } .property-candidate-head .status-pill { width: fit-content; } }
