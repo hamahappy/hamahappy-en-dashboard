@@ -466,3 +466,63 @@ h2 {
 @media (max-width: 420px) {
   .finance-grid { grid-template-columns: 1fr; }
 }
+
+
+/* 2026-10-04: publicity / recruitment */
+.publicity-panel {
+  border-color: #d9ead3;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfef9 100%);
+}
+.publicity-callout {
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+.publicity-callout strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #c2410c;
+  font-size: 16px;
+}
+.publicity-callout p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.publicity-grid {
+  display: grid;
+  gap: 10px;
+}
+.publicity-card {
+  padding: 13px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+}
+.publicity-type {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 11px;
+  font-weight: 800;
+}
+.publicity-card strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.publicity-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  .publicity-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
