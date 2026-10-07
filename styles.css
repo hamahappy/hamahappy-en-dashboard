@@ -526,3 +526,70 @@ h2 {
 @media (min-width: 640px) {
   .publicity-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+
+/* 2026-10-07: candidate user summary */
+.candidate-summary-card {
+  margin: -6px 0 22px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, .06);
+}
+.candidate-summary-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.candidate-summary-head h2 {
+  margin-top: 2px;
+  font-size: 18px;
+}
+.candidate-capacity {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.candidate-summary-main {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.candidate-summary-main strong {
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.candidate-summary-main span {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 700;
+}
+.candidate-meter {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+.candidate-meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+}
+.candidate-summary-note {
+  margin: 10px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.6;
+}
