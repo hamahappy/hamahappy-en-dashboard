@@ -2,7 +2,8 @@ const dashboardData = {
   openDate: "2027年4月1日",
   overallProgress: 61,
   candidateUsers: 5,
-  candidateCapacity: 10,
+  candidateCapacity: 20,
+  initialTarget: 10,
   publicityAssets: [
     {
       type: "SNS正方形版",
@@ -329,8 +330,9 @@ document.getElementById("overallProgress").textContent = dashboardData.overallPr
 document.getElementById("overallProgressBar").style.width = dashboardData.overallProgress + "%";
 
 document.getElementById("candidateUserCount").textContent = dashboardData.candidateUsers + "名";
-document.getElementById("candidateCapacity").textContent = "定員 " + dashboardData.candidateCapacity + "名予定";
-document.getElementById("candidateUserProgress").style.width = Math.min(100, (dashboardData.candidateUsers / dashboardData.candidateCapacity) * 100) + "%";
+document.getElementById("candidateCapacity").textContent = "定員 " + dashboardData.candidateCapacity + "名";
+document.getElementById("initialTarget").textContent = "4月当初目標 " + dashboardData.initialTarget + "名";
+document.getElementById("candidateUserProgress").style.width = Math.min(100, (dashboardData.candidateUsers / dashboardData.initialTarget) * 100) + "%";
 
 document.getElementById("publicityAssets").innerHTML = dashboardData.publicityAssets.map(item => `
   <article class="publicity-card">
