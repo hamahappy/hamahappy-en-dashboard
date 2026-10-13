@@ -2,7 +2,7 @@ const dashboardData = {
   openDate: "2027年4月1日",
   overallProgress: 61,
   candidateUsers: 5,
-  candidateCapacity: 20,
+  candidateCapacity: 10,
   initialTarget: 10,
   publicityAssets: [
     {
@@ -97,10 +97,10 @@ const dashboardData = {
       state: "調査・見積準備",
       stateClass: "status-progress",
       progress: 72,
-      detail: "第一候補は内野2395、第二候補は寺島2258、第三候補は笠井町519-5。10月7日のJA融資相談を踏まえ、1拠点目は内野で低コストにスモールスタートする方針を強化。寺島は将来の第2拠点、笠井の購入は当面見送ります。",
+      detail: "第一候補は内野2395。10月14日の現地確認で改修・浄化槽・分筆費用と建築・消防・指定基準への適合を確認する予定です。寺島は将来の第2拠点、笠井の購入は当面見送る方針です。",,
       owner: "開設準備室",
       deadline: "10月中",
-      nextStep: "10月14日の内野現地打ち合わせで、浄化槽入れ替え・分筆・改修の見積条件を整理する。"
+      nextStep: "10月14日13:30の現地確認で必要工事、工期、用途適合、賃貸条件と概算見積を記録する。"
     },
     {
       title: "行政手続",
@@ -109,8 +109,8 @@ const dashboardData = {
       progress: 45,
       detail: "内野では就労継続支援B型単独での開所を第一案として整理中。生活介護は、物件適性・看護職員の安定確保・利用ニーズを確認し、将来の別拠点または追加指定として検討します。",
       owner: "行政手続担当",
-      deadline: "物件方針決定後",
-      nextStep: "内野物件の建築・消防・設備条件が整理でき次第、行政事前相談資料へ反映する。"
+      deadline: "11月に事前相談資料整理",
+      nextStep: "内野物件の建築・消防・設備適合を確認し、事前相談票・収支予算書・就労支援事業収支の下書きを作る。"
     },
     {
       title: "人員",
@@ -124,51 +124,33 @@ const dashboardData = {
     },
     {
       title: "利用者募集",
-      state: "利用者候補5名・広報準備中",
+      state: "利用者増加・要再集計",
       stateClass: "status-ok",
       progress: 65,
-      detail: "現時点で利用者候補は5名。SNS正方形版、横長バナー版、縦長チラシ版を作成済み。2027年4月OPEN予定、利用相談・見学相談受付中として周知準備を進めています。",
+      detail: "前回集計では候補者5名。その後に追加候補・登録者の情報があり、2027年4月の利用可能人数は未確定です。最新の人数、受給者証、利用開始時期、通所方法を再集計します。個人を特定する情報は掲載しません。",
       owner: "広報・募集担当",
       deadline: "2026年内",
-      nextStep: "問い合わせ先とQRコードを確定し、相談支援事業所・学校・関係機関への配布とSNS発信を開始する。"
+      nextStep: "利用希望・登録・受給者証・通所方法・利用開始予定を匿名集計し、相談支援事業所への資料送付と見学案内を進める。"
     }
   ],
   schedule: [
     {
       month: "10月",
-      day: "04",
-      title: "スタッフミーティング",
-      note: "15:00〜16:00　顔合わせと進捗共有。B型単独案、内野の施設外就労モデル、勤務可能曜日・時間の確認方針を共有する。"
-    },
-    {
-      month: "10月",
-      day: "03",
-      title: "寺島2258　内見・採寸",
-      note: "15:00〜　かとう建築事務所と現地確認。明治2年建築の古い建物。L字型で生活スペースを分ける案、居住部分と事業利用部分の動線・区画、トイレ等の配置を検討。※内野2395とは別案件。"
-    },
-    {
-      month: "10月",
-      day: "07",
-      title: "JAとぴあ浜松　融資相談",
-      note: "10:30〜　障害福祉事業の資金調達を相談。内野でのスモールスタートを基本線とし、定期貯金担保融資の活用可能性、運転資金3〜6か月分の確保、笠井物件購入のリスク、農福連携の可能性を確認。定期貯金担保融資がNPO法人のB型事業に利用可能かはJA側で確認後に連絡予定。"
-    },
-    {
-      month: "10月",
       day: "14",
       title: "内野2395　現地打ち合わせ",
-      note: "13:30〜　浄化槽入れ替え、土地の分筆、改修の見積もり取得に向けて現地確認・打ち合わせ予定。都市計画法は既存宅地確認済み。"
+      note: "13:30〜　浄化槽、分筆、改修見積、工期、建築・消防・指定基準への適合、賃貸条件を確認予定。実施結果は未確認。"
     },
     {
       month: "10月",
       day: "15",
       title: "浜北商工会議所　融資相談",
-      note: "10:00〜　物件取得・改修・運転資金を含む資金計画について相談予定。"
+      note: "10:00〜　希望融資700万円・自己資金200万円以上を前提に、公庫・JA・制度融資を比較し、5名開始時の運転資金を相談予定。実施結果は未確認。"
     },
     {
       month: "10月",
       day: "18",
       title: "スタッフミーティング",
-      note: "8:30〜10:30　10月14日の見積、15日の融資相談を踏まえ、必要資金・融資額・人員配置・今後の動きを共有する。対面を基本にLINE・オンラインも活用。"
+      note: "8:30〜10:30　10月14日と15日の結果を受け、物件・資金・人員の方向性、利用者募集状況、未解決事項を共有・判断する予定。実施結果は未確認。"
     },
     {
       month: "10月",
@@ -215,6 +197,18 @@ const dashboardData = {
   ],
   issues: [
     {
+      title: "10月14日の物件確認・指定基準適合",
+      note: "改修・浄化槽・分筆の正式見積と、建築・消防・設備・指定基準の適合、工期・賃貸条件は未確定。"
+    },
+    {
+      title: "4月の実利用人数と受給者証",
+      note: "前回集計5名から候補・登録者が増加。最新人数、利用意思、受給者証、通所方法、開始時期を匿名集計する。"
+    },
+    {
+      title: "5名開始時の資金繰り",
+      note: "融資条件・自己資金・報酬入金までの期間を確認し、利用者5名・8名・10名の資金収支と不足額を再試算する。"
+    },
+    {
       title: "B型単独か多機能型かの最終判断",
       note: "内野はB型単独を第一案。生活介護は看護職員の確保だけでなく、建物の適性・利用ニーズも踏まえて将来追加を判断する。"
     },
@@ -256,6 +250,30 @@ const dashboardData = {
     }
   ],
   nextActions: [
+    {
+      title: "【最優先】内野物件の開設可否を確認",
+      note: "10月14日13:30の現地打合せで見積・工期・建築消防適合・契約条件を確認し、18日の会議資料に反映する。",
+      owner: "開設準備室",
+      deadline: "10月14日 13:30"
+    },
+    {
+      title: "【最優先】700万円融資と運転資金を比較",
+      note: "10月15日10:00の商工会議所相談に向け、公庫・JA・制度融資の条件、自己資金、5名開始時の資金繰りを整理する。",
+      owner: "AI事務局（資料下書き）／法人（相談）",
+      deadline: "10月15日 10:00"
+    },
+    {
+      title: "【最優先】利用者数を再集計",
+      note: "追加候補・登録者について、受給者証・利用意向・通所手段・4月開始可否を確認し、確定した集計人数だけを公開表示する。",
+      owner: "開設準備室",
+      deadline: "10月18日の会議まで"
+    },
+    {
+      title: "10月18日スタッフ会議の判断事項を準備",
+      note: "14日と15日の結果を踏まえ、物件、資金、人員、利用者募集、行政手続について決定事項と担当・期限を整理する。",
+      owner: "AI事務局（議題案）／法人（判断）",
+      deadline: "10月18日 8:30"
+    },
     {
       title: "スタッフ勤務可能時間を確認",
       note: "勤務可能曜日・時間、週勤務時間、2027年4月からの勤務可否を確認し、常勤換算と勤務形態一覧表へ落とし込む。",
@@ -330,7 +348,7 @@ document.getElementById("overallProgress").textContent = dashboardData.overallPr
 document.getElementById("overallProgressBar").style.width = dashboardData.overallProgress + "%";
 
 document.getElementById("candidateUserCount").textContent = dashboardData.candidateUsers + "名";
-document.getElementById("candidateCapacity").textContent = "定員 " + dashboardData.candidateCapacity + "名";
+document.getElementById("candidateCapacity").textContent = "B型定員 " + dashboardData.candidateCapacity + "名";
 document.getElementById("initialTarget").textContent = "4月当初目標 " + dashboardData.initialTarget + "名";
 document.getElementById("candidateUserProgress").style.width = Math.min(100, (dashboardData.candidateUsers / dashboardData.initialTarget) * 100) + "%";
 
